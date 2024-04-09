@@ -1,0 +1,75 @@
+.animation-developer {
+  position: absolute;
+  top: 250px;
+  left: 220px;
+  display: none;
+}
+
+.developer-base {
+  opacity: 0;
+  height: 0px;
+  animation-name: base;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: var(--animation-count);
+  animation-fill-mode: forwards;
+}
+
+@keyframes base {
+  0% {
+    transform: translate(0px, 60px);
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    height: 124px;
+  }
+}
+
+.developer-lines {
+  opacity: 0;
+  animation-name: lines;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: var(--animation-count);
+  animation-fill-mode: forwards;
+}
+
+.developer-delay1 {
+  animation-delay: var(--animation-delay-lines);
+}
+
+.developer-delay2 {
+  animation-delay: calc(2 * var(--animation-delay-lines));
+}
+
+.developer-delay3 {
+  animation-delay: calc(3 * var(--animation-delay-lines));
+}
+
+.developer-delay4 {
+  animation-delay: calc(4 * var(--animation-delay-lines));
+}
+
+.developer-delay5 {
+  animation-delay: calc(5 * var(--animation-delay-lines));
+}
+
+.developer-delay6 {
+  animation-delay: calc(6 * var(--animation-delay-lines));
+}
+
+.developer-delay7 {
+  animation-delay: calc(7 * var(--animation-delay-lines));
+}
+
+@keyframes lines {
+  0% {
+    transform: translate(0px, 60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}

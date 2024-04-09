@@ -1,0 +1,131 @@
+body {
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+}
+
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px;
+}
+
+button:hover {
+  background-color: black;
+  
+
+
+  
+}
+
+.content-section {
+  margin: 24px 24px 24px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: calc(100% - 48px);
+  flex-grow: 1;
+}
+
+.app-screen-container {
+  position: absolute;
+  min-width: 620px;
+  min-height: 460px;
+  border-radius: 12px;
+  transform: scale(1); /* Use this one for responsivity */
+}
+
+.svg-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 620px;
+  max-height: 460px;
+  box-shadow: 0px 40px 80px 0px rgba(20, 23, 31, 0.08);
+  transition: all 1000ms cubic-bezier(0.5,0,0.2,1);
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+.svg-size {
+  /* Real size of svg asset */
+  min-width: 900px; 
+  min-height: 1050px;
+}
+
+.gradients {
+  position: absolute;
+  inset: 0px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gradient1 {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  right: -250px;
+  bottom: -250px;
+  opacity: 0.12;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #7000ff 0%,
+    rgba(112, 0, 255, 0) 100%
+  );
+}
+
+.gradient2 {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: -250px;
+  top: -250px;
+  opacity: 0.12;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #00ffc2 0%,
+    rgba(0, 255, 194, 0) 100%
+  );
+}
+
+.gradient3 {
+  position: absolute;
+  width: 240px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.04;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.tokens {
+  transform: translateX(100%);
+}
+
+.editor {
+  transform: translateX(-100%);
+}
+
+.active {
+  transform: translateX(0px);
+  opacity: 1;
+  transition-delay: 80ms;
+}
+
+.svg-size {
+  /* Real size of svg asset */
+  min-width: 900px; 
+  min-height: 1050px;
+}

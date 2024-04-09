@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style-ani-designer.css" />
+    <link rel="stylesheet" href="style-ani-developer.css" />
+    <link rel="stylesheet" href="style-ani-product.css" />
+    <link rel="stylesheet" href="style-ani-marketing.css" />
+    <link rel="stylesheet" href="style-ani-other.css" />
+    <link rel="stylesheet" href="style-ani-company.css" />
+    <link rel="stylesheet" href="style-ani-avatars.css" />
+    <link rel="stylesheet" href="style-ani-users.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Temporary controls/inputs -->
+    <div class="controls-section">
+      <input id="input-name" type="text" placeholder="your name" />
+      <select id="select-role-title">
+        <option value="" selected hidden disabled>your role</option>
+        <option value="1">Designer</option>
+        <option value="2">Developer</option>
+        <option value="3">Product</option>
+        <option value="4">Marketing</option>
+        <option value="5">Other</option>
+      </select>
+      <input id="input-role" type="text" placeholder="your job title" />
+      <input id="input-dsname" type="text" placeholder="design system name" />
+      <input id="input-company" type="text" placeholder="company name" />
+      <select id="select-team-size">
+        <option value="" disabled selected hidden>team size</option>
+        <option value="1">Only me</option>
+        <option value="2">2-5</option>
+        <option value="3">6-10</option>
+        <option value="4">10+</option>
+      </select>
+    </div>
+
+    <div class="content-section">
+      <!-- Bacground gradients -->
+      <div class="gradients">
+        <div class="gradient1"></div>
+        <div class="gradient2"></div>
+        <div class="gradient3"></div>
+      </div>
+
+      <!-- Where animations happen -->
+      <div class="app-screen-container">
+        <!-- SVG -->
+        <div class="svg-container">
+          <svg
+            class="svg-size"
+            viewBox="0 0 900 1050"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M759.5 95V955"
+              stroke="url(#paint0_linear_1441_8340)"
+              stroke-opacity="0.24"
+              stroke-dasharray="3 3"
+            />
+            <path
+              d="M880 335L40 335"
+              stroke="url(#paint1_linear_1441_8340)"
+              stroke-opacity="0.4"
+              stroke-dasharray="3 3"
+            />
+            <path
+              d="M880 754.5H40"
+              stroke="url(#paint2_linear_1441_8340)"
+              stroke-opacity="0.4"
+              stroke-dasharray="3 3"
+            />
+            <path
+              d="M300 95V955"
+              stroke="url(#paint3_linear_1441_8340)"
+              stroke-opacity="0.24"
+              stroke-dasharray="3 3"
+            />
+            <g clip-path="url(#clip0_1441_8340)">
+              <rect
+                x="140"
+                y="295"
+                width="620"
+                height="460"
+                rx="12"
+                fill="white"
+              />
+              <path d="M760 334.5H180V335.5H760V334.5Z" fill="#ECEEF3" />
+              <path d="M299.5 335V755H300.5V335H299.5Z" fill="#ECEEF3" />
+              <rect
+                x="196"
+                y="351"
+                width="80"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="196"
+                y="417"
+                width="88"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="196"
+                y="373"
+                width="68"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="196"
+                y="439"
+                width="40"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="196"
+                y="395"
+                width="68"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="360"
+                y="459"
+                width="280"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="360"
+                y="477"
+                width="260"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="360"
+                y="495"
+                width="120"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                width="40"
+                height="460"
+                transform="translate(140 295)"
+                fill="#09122A"
+              />
+              <g opacity="0.6">
+                <path
+                  d="M156.622 738.378C156.8 741.044 158.222 743 160 743C161.778 743 163.2 741.044 163.378 738.378C166.044 738.2 168 736.778 168 735C168 733.222 166.044 731.8 163.378 731.622C163.2 728.956 161.778 727 160 727C158.222 727 156.8 728.956 156.622 731.622C153.956 731.8 152 733.222 152 735C152 736.778 153.956 738.2 156.622 738.378ZM161.422 740.689C161.156 741.044 160.711 741.756 160 741.756C159.289 741.756 158.844 741.133 158.578 740.689C158.222 740.067 157.956 739.267 157.867 738.378C159.733 738.2 161.333 737.4 161.956 736.333C162.044 736.778 162.133 737.311 162.133 737.756C162.133 738.911 161.867 739.889 161.422 740.689ZM158.844 735C158.844 734.378 159.378 733.844 160 733.844C160.622 733.844 161.156 734.378 161.156 735C161.156 735.622 160.622 736.156 160 736.156C159.378 736.156 158.844 735.622 158.844 735ZM165.689 733.578C166.044 733.844 166.756 734.289 166.756 735C166.756 735.711 166.133 736.156 165.689 736.422C165.067 736.778 164.267 737.044 163.378 737.133C163.2 735.267 162.4 733.667 161.333 733.044C161.778 732.956 162.311 732.867 162.756 732.867C163.911 732.867 164.889 733.133 165.689 733.578ZM158.578 729.311C158.844 728.956 159.289 728.244 160 728.244C160.711 728.244 161.156 728.867 161.422 729.311C161.778 729.933 162.044 730.733 162.133 731.622C160.267 731.8 158.667 732.6 158.044 733.667C157.867 733.222 157.867 732.689 157.867 732.156C157.867 731.089 158.133 730.111 158.578 729.311ZM154.311 733.578C154.933 733.222 155.733 732.956 156.622 732.867C156.8 734.733 157.6 736.333 158.667 736.956C158.222 737.044 157.689 737.133 157.244 737.133C156.178 737.133 155.111 736.867 154.311 736.422C153.956 736.156 153.244 735.711 153.244 735C153.244 734.289 153.956 733.844 154.311 733.578Z"
+                  fill="white"
+                />
+              </g>
+            </g>
+            <defs>
+              <linearGradient
+                id="paint0_linear_1441_8340"
+                x1="760"
+                y1="95"
+                x2="760"
+                y2="955"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_1441_8340"
+                x1="880"
+                y1="345"
+                x2="40"
+                y2="345"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_1441_8340"
+                x1="880"
+                y1="764.5"
+                x2="40"
+                y2="764.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" stop-color="white" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_1441_8340"
+                x1="300.5"
+                y1="95"
+                x2="300.5"
+                y2="955"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <clipPath id="clip0_1441_8340">
+                <rect
+                  x="140"
+                  y="295"
+                  width="620"
+                  height="460"
+                  rx="12"
+                  fill="white"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Cursor & Avatars -->
+        <div class="cursor">
+          <p id="name" class="name">You</p>
+        </div>
+
+        <!-- Design System name -->
+        <p class="dsname">Welcome</p>
+
+        <div class="avatars-wrapper">
+          <div class="avatar">
+            <p class="avatar-text"></p>
+            <div class="avatar-tooltip">
+              <p class="avatar-tooltip-you">You</p>
+              <p class="avatar-tooltip-role"></p>
+            </div>
+          </div>
+          <div id="avatars-team">
+            <div class="avatar-2">T</div>
+            <div class="avatar-3">B</div>
+            <div class="avatar-4">+3</div>
+          </div>
+        </div>
+
+        <!-- Job role animations -->
+        <div class="animation-designer">
+          <svg
+            width="280"
+            height="200"
+            viewBox="0 0 280 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              class="designer-position designer-delay8"
+              x="72"
+              y="114"
+              width="140"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="designer-position designer-delay7"
+              x="72"
+              y="96"
+              width="40"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="designer-position designer-delay6"
+              y="96"
+              width="60"
+              height="28"
+              rx="4"
+              fill="#0F62FE"
+              fill-opacity="0.4"
+            />
+
+            <rect
+              class="designer-position designer-delay5"
+              x="72"
+              y="66"
+              width="140"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="designer-position designer-delay4"
+              x="72"
+              y="48"
+              width="40"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="designer-position designer-delay3"
+              y="48"
+              width="60"
+              height="28"
+              rx="4"
+              fill="#0F62FE"
+              fill-opacity="0.7"
+            />
+
+            <rect
+              class="designer-position designer-delay2"
+              x="72"
+              y="18"
+              width="140"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="designer-position designer-delay1"
+              x="72"
+              width="40"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="designer-position designer-delay0"
+              width="60"
+              height="28"
+              rx="4"
+              fill="#0F62FE"
+            />
+          </svg>
+        </div>
+        <div class="animation-developer">
+          <svg
+            width="280"
+            height="200"
+            viewBox="0 0 280 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              class="developer-base"
+              width="280"
+              rx="4"
+              fill="#141A2B"
+              fill-opacity="0.02"
+            />
+            <rect
+              class="developer-lines developer-delay6"
+              x="12"
+              y="102"
+              width="29"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.08"
+            />
+            <rect
+              class="developer-lines developer-delay5"
+              x="24"
+              y="84"
+              width="161"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.08"
+            />
+            <rect
+              class="developer-lines developer-delay4"
+              x="36"
+              y="66"
+              width="204"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.08"
+            />
+            <rect
+              class="developer-lines developer-delay3"
+              x="36"
+              y="48"
+              width="161"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.08"
+            />
+            <rect
+              class="developer-lines developer-delay2"
+              x="24"
+              y="30"
+              width="60"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.08"
+            />
+            <rect
+              class="developer-lines developer-delay1"
+              x="12"
+              y="12"
+              width="29"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.08"
+            />
+          </svg>
+        </div>
+        <div class="animation-product">
+          <svg
+            width="280"
+            height="200"
+            viewBox="0 0 280 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              class="product-position product-delay7"
+              x="150"
+              y="114"
+              width="130"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="product-position product-delay6"
+              x="150"
+              y="96"
+              width="40"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="product-position product-delay5"
+              x="150"
+              width="130"
+              height="84"
+              rx="4"
+              fill="#FEF1F2"
+            />
+            <path
+              class="product-position product-delay4"
+              d="M220 37L210 47M210 37L220 47"
+              stroke="#CB101D"
+              stroke-width="1.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <rect
+              class="product-position product-delay3"
+              y="114"
+              width="130"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="product-position product-delay2"
+              y="96"
+              width="40"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="product-position product-delay1"
+              width="130"
+              height="84"
+              rx="4"
+              fill="#EBFEF6"
+            />
+            <path
+              class="product-position product-delay0"
+              d="M59.1665 41.9997L63.3332 46.1663L71.6665 37.833"
+              stroke="#05751F"
+              stroke-width="1.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="animation-marketing">
+          <svg
+            width="280"
+            height="200"
+            viewBox="0 0 280 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              class="product-position product-delay4"
+              x="180"
+              y="75"
+              width="100"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="product-position product-delay3"
+              x="180"
+              y="57"
+              width="100"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              class="product-position product-delay2"
+              x="180"
+              y="39"
+              width="45"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+
+            <rect
+              class="product-position product-delay1"
+              width="160"
+              height="124"
+              rx="4"
+              fill="#141A2B"
+              fill-opacity="0.02"
+            />
+
+            <g class="product-position product-delay0">
+              <path
+                d="M57.5801 98.5605V114.001"
+                stroke="url(#paint0_linear_1348_96157)"
+                stroke-opacity="0.08"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M102.42 98.5605V114.001"
+                stroke="url(#paint1_linear_1348_96157)"
+                stroke-opacity="0.08"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M111.95 71.98V55.87C113.69 55.44 114.99 53.88 114.99 52V44C114.99 42.12 113.69 40.56 111.95 40.13V40L111.91 39.9L111.99 40V36C111.99 30.48 107.51 26 101.99 26H100.39L100.42 26.04C95.06 21.06 87.89 18 79.99 18C72.09 18 64.92 21.05 59.57 26.03L59.6 26H58C52.48 26 48 30.48 48 36V40.13C46.28 40.59 45 42.14 45 44V52C45 53.86 46.28 55.41 48 55.86V72.02C43.15 75.67 40 81.47 40 88.01C40 90.96 42.01 93.53 44.87 94.23C48.77 95.17 53.04 95.95 57.58 96.56V98.57C64.51 99.5 72.07 100.01 80 100.01C87.93 100.01 95.49 99.5 102.42 98.57V96.57C106.95 95.95 111.22 95.17 115.13 94.23C118 93.54 120 90.96 120 88.01C120 81.45 116.84 75.64 111.96 71.99L111.95 71.98Z"
+                fill="white"
+              />
+              <path
+                d="M80 78C96.5685 78 110 64.5685 110 48C110 31.4315 96.5685 18 80 18C63.4315 18 50 31.4315 50 48C50 64.5685 63.4315 78 80 78Z"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M102.42 91.9102V98.5602C95.4901 99.4902 87.9301 100 80.0001 100C72.0701 100 64.5101 99.4902 57.5801 98.5602V91.9102C57.5801 89.7002 59.3701 87.9102 61.5801 87.9102H98.4201C100.63 87.9102 102.42 89.7002 102.42 91.9102Z"
+                fill="#182D66"
+                fill-opacity="0.04"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M120 88C120 89.48 119.5 90.86 118.64 91.95C117.78 93.05 116.56 93.87 115.13 94.22C111.22 95.16 106.96 95.95 102.42 96.56V91.91C102.42 89.7 100.63 87.91 98.42 87.91H61.58C59.37 87.91 57.58 89.7 57.58 91.91V96.56C53.04 95.95 48.78 95.16 44.87 94.22C42.01 93.52 40 90.95 40 88C40 83.82 41.28 79.95 43.46 76.74C45.65 73.54 48.74 71 52.38 69.5C58.79 77.72 68.78 83 80 83C91.22 83 101.21 77.72 107.62 69.5C114.89 72.5 120 79.65 120 88Z"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M102.42 57.18C102.42 58.54 101.74 59.82 100.59 60.55C95.2201 63.93 87.9701 66 80.0001 66C72.0301 66 64.7901 63.93 59.4101 60.55C58.2601 59.82 57.5801 58.54 57.5801 57.18V38.82C57.5801 37.46 58.2601 36.18 59.4101 35.45C64.7801 32.07 72.0301 30 80.0001 30C87.9701 30 95.2101 32.07 100.59 35.45C101.74 36.18 102.42 37.46 102.42 38.82V57.18Z"
+                fill="#182D66"
+                fill-opacity="0.04"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M99.42 49.95V38.82C99.42 38.47 99.25 38.16 98.99 37.99C93.87 34.77 87.13 33 80 33C80 33 88.26 33.59 94.37 39.29C98.26 42.92 99.42 49.95 99.42 49.95Z"
+                fill="white"
+              />
+              <path
+                d="M107.62 69.5004C101.21 77.7204 91.2198 83.0004 79.9998 83.0004C68.7798 83.0004 58.7898 77.7204 52.3798 69.5004C51.5498 68.4004 51.7798 66.8304 52.8798 66.0004C53.9898 65.1804 55.5598 65.4004 56.3798 66.5104H56.3998C61.8898 73.5104 70.4198 78.0004 79.9998 78.0004C89.5798 78.0004 98.1098 73.5104 103.6 66.5204H103.62C104.44 65.4004 106.01 65.1804 107.12 66.0004C108.22 66.8304 108.45 68.4004 107.62 69.5004Z"
+                fill="#141A2B"
+                fill-opacity="0.02"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M50 48C50 50.77 50.38 53.45 51.09 56H49C48.65 56 48.32 55.96 48 55.87C46.27 55.43 45 53.86 45 52V44C45 42.14 46.27 40.57 48 40.13C48.32 40.04 48.65 40 49 40H51.09C50.38 42.55 50 45.23 50 48Z"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M59.61 26C55.58 29.73 52.58 34.55 51.09 40H49C48.65 40 48.32 40.04 48 40.13V36C48 30.47 52.48 26 58 26H59.61Z"
+                fill="#182D66"
+                fill-opacity="0.04"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M56.39 66.5001C55.56 65.4001 53.99 65.1701 52.89 66.0001C51.78 66.8301 51.56 68.3901 52.38 69.5001C50.81 70.1501 49.34 70.9901 48 72.0001V55.8701C48.32 55.9601 48.65 56.0001 49 56.0001H51.09C52.15 59.8701 53.98 63.4301 56.39 66.5001Z"
+                fill="#182D66"
+                fill-opacity="0.04"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M110 48C110 50.77 109.62 53.45 108.91 56H111C111.35 56 111.68 55.96 112 55.87C113.73 55.43 115 53.86 115 52V44C115 42.14 113.73 40.57 112 40.13C111.68 40.04 111.35 40 111 40H108.91C109.62 42.55 110 45.23 110 48Z"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M100.39 26C104.42 29.73 107.42 34.55 108.91 40H111C111.35 40 111.68 40.04 112 40.13V36C112 30.47 107.52 26 102 26H100.39Z"
+                fill="#182D66"
+                fill-opacity="0.04"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M103.61 66.5001C104.44 65.4001 106.01 65.1701 107.11 66.0001C108.22 66.8301 108.44 68.3901 107.62 69.5001C109.19 70.1501 110.66 70.9901 112 72.0001V55.8701C111.68 55.9601 111.35 56.0001 111 56.0001H108.91C107.85 59.8701 106.02 63.4301 103.61 66.5001Z"
+                fill="#182D66"
+                fill-opacity="0.04"
+                stroke="#C7CDDB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_1348_96157"
+                  x1="58.0801"
+                  y1="98.5605"
+                  x2="58.0801"
+                  y2="114.001"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#09122A" />
+                  <stop offset="1" stop-color="#09122A" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_1348_96157"
+                  x1="102.92"
+                  y1="98.5605"
+                  x2="102.92"
+                  y2="114.001"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#09122A" />
+                  <stop offset="1" stop-color="#09122A" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+            </g>
+          </svg>
+        </div>
+        <div class="animation-other">
+          <svg
+            width="280"
+            height="200"
+            viewBox="0 0 280 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="other-position other-delay6"
+              d="M4 122H276"
+              stroke="#ECEEF3"
+            />
+            <g class="other-position other-delay5">
+              <rect
+                x="208"
+                y="101"
+                width="52"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="72"
+                y="101"
+                width="76"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="8"
+                y="101"
+                width="32"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+            </g>
+            <path
+              class="other-position other-delay4"
+              d="M4 90H276"
+              stroke="#ECEEF3"
+            />
+            <g class="other-position other-delay3">
+              <rect
+                x="208"
+                y="69"
+                width="32"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="72"
+                y="69"
+                width="58"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="8"
+                y="69"
+                width="32"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+            </g>
+            <path
+              class="other-position other-delay2"
+              d="M4 58H276"
+              stroke="#ECEEF3"
+            />
+            <g class="other-position other-delay1">
+              <rect
+                x="208"
+                y="37"
+                width="52"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="72"
+                y="37"
+                width="104"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+              <rect
+                x="8"
+                y="37"
+                width="32"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.04"
+              />
+            </g>
+            <g class="other-position other-delay0">
+              <rect
+                width="280"
+                height="26"
+                rx="8"
+                fill="#141A2B"
+                fill-opacity="0.02"
+              />
+              <rect
+                x="208"
+                y="8"
+                width="32"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.08"
+              />
+              <rect
+                x="72"
+                y="8"
+                width="60"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.08"
+              />
+              <rect
+                x="8"
+                y="8"
+                width="32"
+                height="10"
+                rx="5"
+                fill="#09122A"
+                fill-opacity="0.08"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Company name animation -->
+        <div class="animation-company">
+          <div class="company-button company-animation">
+            <p class="company-typography company-short animation-short"></p>
+            <p class="company-typography company-full"></p>
+
+            <svg
+              class="company-caret animation-opacity"
+              width="8"
+              height="20"
+              viewBox="0 0 8 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 9L4 11L6 9"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Other users (Team size) -->
+        <div class="user-1">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="cursor-1">
+            <p id="name-1" class="name-1">Thomas</p>
+          </div>
+        </div>
+        <div class="user-2">
+          <svg
+            width="400"
+            height="186"
+            viewBox="0 0 400 186"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="60"
+              y="80"
+              width="280"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              x="60"
+              y="98"
+              width="260"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+            <rect
+              x="60"
+              y="116"
+              width="60"
+              height="10"
+              rx="5"
+              fill="#09122A"
+              fill-opacity="0.04"
+            />
+          </svg>
+          <div class="cursor-2">
+            <p id="name-2" class="name-2">Brooke</p>
+          </div>
+        </div>
+        <div class="user-3">
+          <svg
+            width="400"
+            height="227"
+            viewBox="0 0 400 227"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              opacity="0.04"
+              x="60"
+              y="60"
+              width="280"
+              height="10"
+              rx="5"
+              fill="#14171F"
+            />
+            <rect
+              opacity="0.04"
+              x="60"
+              y="78"
+              width="120"
+              height="10"
+              rx="5"
+              fill="#14171F"
+            />
+          </svg>
+          <div class="cursor-3">
+            <p id="name-3" class="name-3">Jamie</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

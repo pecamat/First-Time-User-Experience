@@ -1,0 +1,53 @@
+.animation-other {
+    position: absolute;
+    top: 250px;
+    left: 220px;
+    display: none;
+  }
+
+.other-position {
+  opacity: 0;
+  animation-name: position;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: var(--animation-count);
+  animation-fill-mode: forwards;
+}
+
+.other-delay0 {
+  animation-delay: 0;
+}
+
+.other-delay1 {
+  animation-delay: var(--animation-delay-lines);
+}
+
+.other-delay2 {
+  animation-delay: calc(2 * var(--animation-delay-lines));
+}
+
+.other-delay3 {
+  animation-delay: calc(3 * var(--animation-delay-lines));
+}
+
+.other-delay4 {
+  animation-delay: calc(4 * var(--animation-delay-lines));
+}
+
+.other-delay5 {
+  animation-delay: calc(5 * var(--animation-delay-lines));
+}
+
+.other-delay6 {
+  animation-delay: calc(6 * var(--animation-delay-lines));
+}
+
+@keyframes position {
+  0% {
+    transform: translate(0px, 60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,139 @@
+:root {
+    --color-1: #EEF4FF;
+    --color-2: #D6E4FF;
+    --color-3: #93B8FF;
+    --color-4: #4B89FF;
+    --color-5: #0F62FE;
+    --color-6: #014BD6;
+    --color-7: #003496;
+}
+
+.tokens-animation-container {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+
+/* Token general style */
+
+.token-general-screen-tokens {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    transition: all 1000ms cubic-bezier(0.5,0,0.2,1);
+}
+
+.token-general-screen-editor {
+    position: absolute;
+    width: 58px;
+    height: 26px;
+    border-radius: 4px;
+    transition: all 1000ms cubic-bezier(0.5,0,0.2,1);
+}
+
+
+/* Token 1 */
+
+.token-1-screen-tokens {
+    background-color: var(--color-1);
+    transform: translate(346px, 212px);
+    transition-delay: 0ms;
+}
+
+.token-1-screen-editor {
+    background-color: var(--color-1);
+    transform: translate(245px, 274px);
+    transition-delay: 0ms;
+}
+
+
+/* Token 2 */
+
+.token-2-screen-tokens {
+    background-color: var(--color-2);
+    transform: translate(346px, 242px);
+    transition-delay: 60ms;
+}
+
+.token-2-screen-editor {
+    background-color: var(--color-2);
+    transform: translate(245px, 332px);
+    transition-delay: 60ms;
+}
+
+
+/* Token 3 */
+
+.token-3-screen-tokens {
+    background-color: var(--color-3);
+    transform: translate(346px, 271px);
+    transition-delay: 120ms;
+}
+
+.token-3-screen-editor {
+    background-color: var(--color-3);
+    transform: translate(245px, 389px);
+    transition-delay: 120ms;
+}
+
+
+/* Token 4 */
+
+.token-4-screen-tokens {
+    background-color: var(--color-4);
+    transform: translate(346px, 300px);
+    transition-delay: 180ms;
+}
+
+.token-4-screen-editor {
+    background-color: var(--color-4);
+    transform: translate(245px, 447px);
+    transition-delay: 180ms;
+}
+
+
+/* Token 5 */
+
+.token-5-screen-tokens {
+    background-color: var(--color-5);
+    transform: translate(346px, 329px);
+    transition-delay: 240ms;
+}
+
+.token-5-screen-editor {
+    background-color: var(--color-5);
+    transform: translate(245px, 498px);
+    transition-delay: 240ms;
+}
+
+
+/* Token 6 */
+
+.token-6-screen-tokens {
+    background-color: var(--color-6);
+    transform: translate(346px, 358px);
+    transition-delay: 300ms;
+}
+
+.token-6-screen-editor {
+    background-color: var(--color-6);
+    transform: translate(245px, 550px);
+    transition-delay: 300ms;
+}
+
+
+/* Token 7 */
+
+.token-7-screen-tokens {
+    background-color: var(--color-7);
+    transform: translate(346px, 387px);
+    transition-delay: 360ms;
+}
+
+.token-7-screen-editor {
+    background-color: var(--color-7);
+    transform: translate(245px, 601px);
+    transition-delay: 360ms;
+}
