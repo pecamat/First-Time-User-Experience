@@ -52,7 +52,7 @@ function updateName() {
   console.log(userName);
 }
 
-// Your Comany
+// Your Company
 
 function companyAnimation() {
   animationCompanyButton.style.display = "block";

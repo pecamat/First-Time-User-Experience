@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-states.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Temporary controls/inputs -->
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        margin: 24px;
+        width: 200px;
+      "
+    >
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        Authorizing Figma
+        <button
+          onclick="updateStateAuthorizing('resting'); updateStateLoading('resting'); updateStateImporting('resting')"
+        >
+          Resting
+        </button>
+        <button
+          onclick="updateStateAuthorizing('loading'); updateStateLoading('resting'); updateStateImporting('resting')"
+        >
+          Loading
+        </button>
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('loading'); updateStateImporting('resting')"
+        >
+          Success
+        </button>
+        <button
+          onclick="updateStateAuthorizing('error'); updateStateLoading('resting'); updateStateImporting('resting')"
+        >
+          Error
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        Loading styles
+        <button
+          onclick="updateStateAuthorizing('loading'); updateStateLoading('resting'); updateStateImporting('resting')"
+        >
+          Resting
+        </button>
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('loading'); updateStateImporting('resting')"
+        >
+          Loading
+        </button>
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('success'); updateStateImporting('loading')"
+        >
+          Success
+        </button>
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('error'); updateStateImporting('resting')"
+        >
+          Error
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        Importing styles
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('loading'); updateStateImporting('resting')"
+        >
+          Resting
+        </button>
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('success'); updateStateImporting('loading')"
+        >
+          Loading
+        </button>
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('success'); updateStateImporting('success')"
+        >
+          Success
+        </button>
+        <button
+          onclick="updateStateAuthorizing('success'); updateStateLoading('success'); updateStateImporting('error')"
+        >
+          Error
+        </button>
+      </div>
+    </div>
+
+    <div class="content-section">
+
+      <!-- Bacground gradients -->
+      <div class="gradients">
+        <div class="gradient1"></div>
+        <div class="gradient2"></div>
+        <div class="gradient3"></div>
+      </div>
+
+      <!-- Where animations happen -->
+      <div class="app-screen-container">
+
+        <!-- SVG -->
+        <div class="svg-container">
+          <svg
+            class="svg-size"
+            width="900"
+            height="1050"
+            viewBox="0 0 900 1050"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M854 334.5L14 334.5"
+              stroke="url(#paint0_linear_4495_30330)"
+              stroke-opacity="0.4"
+              stroke-dasharray="3 3"
+            />
+            <path
+              d="M299.5 72V932"
+              stroke="url(#paint1_linear_4495_30330)"
+              stroke-opacity="0.24"
+              stroke-dasharray="3 3"
+            />
+            <path
+              d="M759.5 72V932"
+              stroke="url(#paint2_linear_4495_30330)"
+              stroke-opacity="0.24"
+              stroke-dasharray="3 3"
+            />
+            <path
+              d="M854 754.5H14"
+              stroke="url(#paint3_linear_4495_30330)"
+              stroke-opacity="0.4"
+              stroke-dasharray="3 3"
+            />
+            <g filter="url(#filter0_d_4495_30330)">
+              <g clip-path="url(#clip0_4495_30330)">
+                <rect
+                  x="140"
+                  y="295"
+                  width="620"
+                  height="460"
+                  rx="12"
+                  fill="white"
+                />
+                <mask id="path-6-inside-1_4495_30330" fill="white">
+                  <path d="M180 295H760V335H180V295Z" />
+                </mask>
+                <path
+                  d="M760 334H180V336H760V334Z"
+                  fill="#ECEEF3"
+                  mask="url(#path-6-inside-1_4495_30330)"
+                />
+                <mask id="path-8-inside-2_4495_30330" fill="white">
+                  <path d="M180 335H300V755H180V335Z" />
+                </mask>
+                <path
+                  d="M299 335V755H301V335H299Z"
+                  fill="#ECEEF3"
+                  mask="url(#path-8-inside-2_4495_30330)"
+                />
+                <rect
+                  x="196"
+                  y="351"
+                  width="80"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="196"
+                  y="417"
+                  width="88"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="196"
+                  y="373"
+                  width="68"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="196"
+                  y="439"
+                  width="40"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="196"
+                  y="395"
+                  width="68"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="196"
+                  y="483"
+                  width="40"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="196"
+                  y="505"
+                  width="40"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="196"
+                  y="461"
+                  width="68"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  width="40"
+                  height="460"
+                  transform="translate(140 295)"
+                  fill="#09122A"
+                />
+                <path
+                  opacity="0.6"
+                  d="M156.622 738.378C156.8 741.044 158.222 743 160 743C161.778 743 163.2 741.044 163.378 738.378C166.044 738.2 168 736.778 168 735C168 733.222 166.044 731.8 163.378 731.622C163.2 728.956 161.778 727 160 727C158.222 727 156.8 728.956 156.622 731.622C153.956 731.8 152 733.222 152 735C152 736.778 153.956 738.2 156.622 738.378ZM161.422 740.689C161.156 741.044 160.711 741.756 160 741.756C159.289 741.756 158.844 741.133 158.578 740.689C158.222 740.067 157.956 739.267 157.867 738.378C159.733 738.2 161.333 737.4 161.956 736.333C162.044 736.778 162.133 737.311 162.133 737.756C162.133 738.911 161.867 739.889 161.422 740.689ZM158.844 735C158.844 734.378 159.378 733.844 160 733.844C160.622 733.844 161.156 734.378 161.156 735C161.156 735.622 160.622 736.156 160 736.156C159.378 736.156 158.844 735.622 158.844 735ZM165.689 733.578C166.044 733.844 166.756 734.289 166.756 735C166.756 735.711 166.133 736.156 165.689 736.422C165.067 736.778 164.267 737.044 163.378 737.133C163.2 735.267 162.4 733.667 161.333 733.044C161.778 732.956 162.311 732.867 162.756 732.867C163.911 732.867 164.889 733.133 165.689 733.578ZM158.578 729.311C158.844 728.956 159.289 728.244 160 728.244C160.711 728.244 161.156 728.867 161.422 729.311C161.778 729.933 162.044 730.733 162.133 731.622C160.267 731.8 158.667 732.6 158.044 733.667C157.867 733.222 157.867 732.689 157.867 732.156C157.867 731.089 158.133 730.111 158.578 729.311ZM154.311 733.578C154.933 733.222 155.733 732.956 156.622 732.867C156.8 734.733 157.6 736.333 158.667 736.956C158.222 737.044 157.689 737.133 157.244 737.133C156.178 737.133 155.111 736.867 154.311 736.422C153.956 736.156 153.244 735.711 153.244 735C153.244 734.289 153.956 733.844 154.311 733.578Z"
+                  fill="white"
+                />
+                <rect
+                  x="317"
+                  y="369"
+                  width="39"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="317"
+                  y="426"
+                  width="39"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="317"
+                  y="454"
+                  width="39"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="317"
+                  y="482"
+                  width="39"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="317"
+                  y="510"
+                  width="44"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="317"
+                  y="398"
+                  width="66"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="368"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="369"
+                  width="86"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="398"
+                  width="86"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="426"
+                  width="59"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="455"
+                  width="45"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="482"
+                  width="45"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="509"
+                  width="79"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="398"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="426"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="454"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="482"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="510"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="317"
+                  y="537"
+                  width="39"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="317"
+                  y="565"
+                  width="44"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="537"
+                  width="45"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="584"
+                  y="564"
+                  width="79"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="537"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="462"
+                  y="565"
+                  width="77"
+                  height="10"
+                  rx="5"
+                  fill="#09122A"
+                  fill-opacity="0.04"
+                />
+                <rect
+                  x="299"
+                  y="335"
+                  width="461"
+                  height="19"
+                  fill="#141A2B"
+                  fill-opacity="0.02"
+                />
+              </g>
+            </g>
+            <defs>
+              <filter
+                id="filter0_d_4495_30330"
+                x="60"
+                y="255"
+                width="780"
+                height="620"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="40" />
+                <feGaussianBlur stdDeviation="40" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.0784314 0 0 0 0 0.0901961 0 0 0 0 0.121569 0 0 0 0.08 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_4495_30330"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_4495_30330"
+                  result="shape"
+                />
+              </filter>
+              <linearGradient
+                id="paint0_linear_4495_30330"
+                x1="854"
+                y1="344.5"
+                x2="14"
+                y2="344.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_4495_30330"
+                x1="300"
+                y1="72"
+                x2="300"
+                y2="932"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_4495_30330"
+                x1="760"
+                y1="72"
+                x2="760"
+                y2="932"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_4495_30330"
+                x1="854"
+                y1="764.5"
+                x2="14"
+                y2="764.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-opacity="0" />
+                <stop offset="0.499101" stop-color="white" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <clipPath id="clip0_4495_30330">
+                <rect
+                  x="140"
+                  y="295"
+                  width="620"
+                  height="460"
+                  rx="12"
+                  fill="white"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- States container -->
+        <div class="state-container">
+          <div class="figma-container">
+            <div class="pulsing"></div>
+            <div class="figma-logo">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 8C8 5.73333 9.73333 4 12 4H16V12H12C9.73333 12 8 10.2667 8 8Z"
+                  fill="#F24E1E"
+                />
+                <path
+                  d="M8 16C8 13.7333 9.73333 12 12 12H16V20H12C9.73333 20 8 18.2667 8 16Z"
+                  fill="#A259FF"
+                />
+                <path
+                  d="M12 28C14.2667 28 16 26.2667 16 24V20H12C9.73333 20 8 21.7333 8 24C8 26.2667 9.73333 28 12 28Z"
+                  fill="#0ACF83"
+                />
+                <path
+                  d="M20 20C22.2091 20 24 18.2091 24 16C24 13.7909 22.2091 12 20 12C17.7909 12 16 13.7909 16 16C16 18.2091 17.7909 20 20 20Z"
+                  fill="#1ABCFE"
+                />
+                <path
+                  d="M16 4H20C22.2667 4 24 5.73333 24 8C24 10.2667 22.2667 12 20 12H16V4Z"
+                  fill="#FF7262"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Authorizing Figma -->
+          <div id="authorizing-figma" class="state-field-container">
+            <div class="connect-line-container">
+              <div class="connect-line"></div>
+            </div>
+            <div class="state-field">
+              <div class="state-icon">
+                <div class="state-icon-resting">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.13335 3.075C6.22341 3.45165 5.39657 4.00383 4.70001 4.7M3.075 7.13333C2.69713 8.04191 2.50175 9.01597 2.5 10M3.07503 12.8667C3.45168 13.7766 4.00386 14.6034 4.70003 15.3M7.13333 16.925C8.04191 17.3029 9.01597 17.4982 10 17.5M12.8667 16.925C13.7766 16.5483 14.6034 15.9962 15.3 15.3M16.925 12.8667C17.3028 11.9581 17.4982 10.984 17.5 10M16.925 7.13334C16.5483 6.2234 15.9962 5.39656 15.3 4.7M12.8667 3.075C11.9581 2.69713 10.984 2.50175 10 2.5"
+                      stroke="#C7CDDB"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-loading">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.3"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z"
+                      fill="#104FC6"
+                    />
+                    <path
+                      class="loading-spinner"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 10.5523 3.55228 11 3 11C2.44772 11 2 10.5523 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 10.5523 17.5523 11 17 11C16.4477 11 16 10.5523 16 10Z"
+                      fill="#104FC6"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-success">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 10L9.16667 11.6667L12.5 8.33333M2.5 10C2.5 10.9849 2.69399 11.9602 3.0709 12.8701C3.44781 13.7801 4.00026 14.6069 4.6967 15.3033C5.39314 15.9997 6.21993 16.5522 7.12987 16.9291C8.03982 17.306 9.01509 17.5 10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C9.01509 2.5 8.03982 2.69399 7.12987 3.0709C6.21993 3.44781 5.39314 4.00026 4.6967 4.6967C4.00026 5.39314 3.44781 6.21993 3.0709 7.12987C2.69399 8.03982 2.5 9.01509 2.5 10Z"
+                      stroke="#05751F"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-error">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 8L12 12M12 8L8 12M2.5 10C2.5 10.9849 2.69399 11.9602 3.0709 12.8701C3.44781 13.7801 4.00026 14.6069 4.6967 15.3033C5.39314 15.9997 6.21993 16.5522 7.12987 16.9291C8.03982 17.306 9.01509 17.5 10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C9.01509 2.5 8.03982 2.69399 7.12987 3.0709C6.21993 3.44781 5.39314 4.00026 4.6967 4.6967C4.00026 5.39314 3.44781 6.21993 3.0709 7.12987C2.69399 8.03982 2.5 9.01509 2.5 10Z"
+                      stroke="#CB101D"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="state-label">Authorizing Figma</div>
+            </div>
+          </div>
+
+          <!-- Loading styles -->
+          <div id="loading-styles" class="state-field-container">
+            <div class="connect-line-container">
+              <div class="connect-line"></div>
+            </div>
+            <div class="state-field">
+              <div class="state-icon">
+                <div class="state-icon-resting">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.13335 3.075C6.22341 3.45165 5.39657 4.00383 4.70001 4.7M3.075 7.13333C2.69713 8.04191 2.50175 9.01597 2.5 10M3.07503 12.8667C3.45168 13.7766 4.00386 14.6034 4.70003 15.3M7.13333 16.925C8.04191 17.3029 9.01597 17.4982 10 17.5M12.8667 16.925C13.7766 16.5483 14.6034 15.9962 15.3 15.3M16.925 12.8667C17.3028 11.9581 17.4982 10.984 17.5 10M16.925 7.13334C16.5483 6.2234 15.9962 5.39656 15.3 4.7M12.8667 3.075C11.9581 2.69713 10.984 2.50175 10 2.5"
+                      stroke="#C7CDDB"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-loading">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.3"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z"
+                      fill="#104FC6"
+                    />
+                    <path
+                      class="loading-spinner"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 10.5523 3.55228 11 3 11C2.44772 11 2 10.5523 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 10.5523 17.5523 11 17 11C16.4477 11 16 10.5523 16 10Z"
+                      fill="#104FC6"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-success">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 10L9.16667 11.6667L12.5 8.33333M2.5 10C2.5 10.9849 2.69399 11.9602 3.0709 12.8701C3.44781 13.7801 4.00026 14.6069 4.6967 15.3033C5.39314 15.9997 6.21993 16.5522 7.12987 16.9291C8.03982 17.306 9.01509 17.5 10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C9.01509 2.5 8.03982 2.69399 7.12987 3.0709C6.21993 3.44781 5.39314 4.00026 4.6967 4.6967C4.00026 5.39314 3.44781 6.21993 3.0709 7.12987C2.69399 8.03982 2.5 9.01509 2.5 10Z"
+                      stroke="#05751F"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-error">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 8L12 12M12 8L8 12M2.5 10C2.5 10.9849 2.69399 11.9602 3.0709 12.8701C3.44781 13.7801 4.00026 14.6069 4.6967 15.3033C5.39314 15.9997 6.21993 16.5522 7.12987 16.9291C8.03982 17.306 9.01509 17.5 10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C9.01509 2.5 8.03982 2.69399 7.12987 3.0709C6.21993 3.44781 5.39314 4.00026 4.6967 4.6967C4.00026 5.39314 3.44781 6.21993 3.0709 7.12987C2.69399 8.03982 2.5 9.01509 2.5 10Z"
+                      stroke="#CB101D"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="state-label">Loaded styles from Figma</div>
+            </div>
+          </div>
+
+          <!-- Importing styles -->
+          <div id="importing-styles" class="state-field-container">
+            <div class="connect-line-container">
+              <div class="connect-line"></div>
+            </div>
+            <div class="state-field">
+              <div class="state-icon">
+                <div class="state-icon-resting">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.13335 3.075C6.22341 3.45165 5.39657 4.00383 4.70001 4.7M3.075 7.13333C2.69713 8.04191 2.50175 9.01597 2.5 10M3.07503 12.8667C3.45168 13.7766 4.00386 14.6034 4.70003 15.3M7.13333 16.925C8.04191 17.3029 9.01597 17.4982 10 17.5M12.8667 16.925C13.7766 16.5483 14.6034 15.9962 15.3 15.3M16.925 12.8667C17.3028 11.9581 17.4982 10.984 17.5 10M16.925 7.13334C16.5483 6.2234 15.9962 5.39656 15.3 4.7M12.8667 3.075C11.9581 2.69713 10.984 2.50175 10 2.5"
+                      stroke="#C7CDDB"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-loading">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.3"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z"
+                      fill="#104FC6"
+                    />
+                    <path
+                      class="loading-spinner"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 10.5523 3.55228 11 3 11C2.44772 11 2 10.5523 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 10.5523 17.5523 11 17 11C16.4477 11 16 10.5523 16 10Z"
+                      fill="#104FC6"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-success">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.5 10L9.16667 11.6667L12.5 8.33333M2.5 10C2.5 10.9849 2.69399 11.9602 3.0709 12.8701C3.44781 13.7801 4.00026 14.6069 4.6967 15.3033C5.39314 15.9997 6.21993 16.5522 7.12987 16.9291C8.03982 17.306 9.01509 17.5 10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C9.01509 2.5 8.03982 2.69399 7.12987 3.0709C6.21993 3.44781 5.39314 4.00026 4.6967 4.6967C4.00026 5.39314 3.44781 6.21993 3.0709 7.12987C2.69399 8.03982 2.5 9.01509 2.5 10Z"
+                      stroke="#05751F"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="state-icon-error">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 8L12 12M12 8L8 12M2.5 10C2.5 10.9849 2.69399 11.9602 3.0709 12.8701C3.44781 13.7801 4.00026 14.6069 4.6967 15.3033C5.39314 15.9997 6.21993 16.5522 7.12987 16.9291C8.03982 17.306 9.01509 17.5 10 17.5C10.9849 17.5 11.9602 17.306 12.8701 16.9291C13.7801 16.5522 14.6069 15.9997 15.3033 15.3033C15.9997 14.6069 16.5522 13.7801 16.9291 12.8701C17.306 11.9602 17.5 10.9849 17.5 10C17.5 9.01509 17.306 8.03982 16.9291 7.12987C16.5522 6.21993 15.9997 5.39314 15.3033 4.6967C14.6069 4.00026 13.7801 3.44781 12.8701 3.0709C11.9602 2.69399 10.9849 2.5 10 2.5C9.01509 2.5 8.03982 2.69399 7.12987 3.0709C6.21993 3.44781 5.39314 4.00026 4.6967 4.6967C4.00026 5.39314 3.44781 6.21993 3.0709 7.12987C2.69399 8.03982 2.5 9.01509 2.5 10Z"
+                      stroke="#CB101D"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="state-label">Importing styles as tokens</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
