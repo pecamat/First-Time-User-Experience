@@ -7,6 +7,23 @@ body {
   padding: 0px;
 }
 
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px;
+}
+
+button:hover {
+  background-color: black;
+  
+
+
+  
+}
+
 .content-section {
   margin: 24px 24px 24px 0;
   position: relative;
@@ -25,6 +42,7 @@ body {
   border-radius: 12px;
   transform: scale(1); /* Use this one for responsivity */
 }
+
 .svg-container {
   position: absolute;
   display: flex;
@@ -33,6 +51,9 @@ body {
   max-width: 620px;
   max-height: 460px;
   box-shadow: 0px 40px 80px 0px rgba(20, 23, 31, 0.08);
+  transition: all 1000ms cubic-bezier(0.5,0,0.2,1);
+  opacity: 0;
+  transition-delay: 0ms;
 }
 
 .svg-size {
@@ -87,4 +108,24 @@ body {
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+
+.tokens {
+  transform: translateX(100%);
+}
+
+.editor {
+  transform: translateX(-100%);
+}
+
+.active {
+  transform: translateX(0px);
+  opacity: 1;
+  transition-delay: 80ms;
+}
+
+.svg-size {
+  /* Real size of svg asset */
+  min-width: 900px; 
+  min-height: 1050px;
 }
